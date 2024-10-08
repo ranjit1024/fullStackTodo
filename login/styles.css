@@ -24,6 +24,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
+    
     position: relative;
 }
 
@@ -97,4 +98,16 @@ p {
     margin-top: 10px;
     font-size: 14px;
     color: #666;
+}
+span{
+    color:red;
+    font-weight: 400;
+    display: flex;
+    margin-right: 50px;
+    font-size: 15px;
+    
+}
+
+.hide {
+    display: none;
 }
