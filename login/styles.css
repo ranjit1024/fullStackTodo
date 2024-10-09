@@ -101,11 +101,10 @@ p {
 }
 span{
     color:red;
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     margin-right: 50px;
-    font-size: 15px;
-    
+    font-size: 13px;
 }
 
 .hide {
