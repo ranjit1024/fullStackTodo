@@ -20,9 +20,12 @@
                 </div>
                 <div class="input-field">
                     <input id="email" type="email" placeholder="Email"  />
+                    <span class="notValidUser">Password Length Must be 8</span>
                 </div>
-                <div class="input-field">
-                    <input id="password" type="password" placeholder="Password"/>
+                <div class="input-field" id="password-field">
+                    <input id="password" type="password" placeholder="Password">
+                    <i class="bi bi-eye-slash password-hide"></i>
+                    <i class="bi bi-eye hide password-show"></i>
                     <span class="notValidUser">Password Length Must be 8</span>
                 </div>
                 <button type="submit"  class="btn">Sign Up</button>
