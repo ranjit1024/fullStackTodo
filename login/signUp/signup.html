@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In / Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../popup.css">
 </head>
 <body>
     <div class="container">
@@ -24,20 +25,24 @@
                     <input id="password" type="password" placeholder="Password"/>
                     <span class="hide wrongPassword">Password Lenght Must be 8</span>
                 </div>
-                <button type="submit" class="btn">Sign Up</button>
+                <button type="submit"  class="btn">Sign Up</button>
                 <p>Already have an account? <a href="signin.html">Sign In</a></p>
             </form>
-
             <!-- Sign Up Form -->
-            
         </div>
     </div>
-    <div>
-        
-    </div>
+    <section class="model-container">
+        <div class="model-box" id="popup">
+            <i class="bi bi-check-circle-fill"></i>
+            <h2>Completed</h2>
+            <h3>You Have Been Successfully Signup</h3>
+            <button class="close">Back To The Sign In</button>
+        </div>
+    </section>
 
+    <!-- making popup section -->
 
+    </body>
+    
     <script src="index.js"></script>
-</body>
-
 </html>

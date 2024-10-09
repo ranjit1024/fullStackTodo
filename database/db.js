@@ -22,7 +22,7 @@ const TodoSchema = mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 const Task = mongoose.model("todo", TodoSchema);
 
-module.exportes = {
+module.exports = {
     User,
     Task
 }
