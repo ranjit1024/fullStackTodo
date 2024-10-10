@@ -56,19 +56,20 @@ username.addEventListener("input", async (e)=>{
         }
         else{
             if(!finalRespose.response[0]){
-                showingUserInfo.classList.remove("hide");
                 document.querySelector(".showing-info-username span").style.color = "red";
                 username.style.border = "1.5px solid red"
+                showingUserInfo.classList.remove("hide");
             }
             else if(!finalRespose.response[3]){
                 document.querySelector(".showing-info-username span").innerHTML = `<i class="bi bi-x-octagon-fill"></i>Username is already taken`
                 document.querySelector(".showing-info-username").classList.remove("hide");
-                
+                showingUserInfo.classList.remove("hide");
             }
             else if(finalRespose.response[0]){
                 document.querySelector(".showing-info-username span").innerHTML = `<i class="bi bi-patch-check-fill"></i>Username is Valid`
                 document.querySelector(".showing-info-username span").style.color = `#228B22`
                 username.style.border = "1.5px solid #228B22"
+                showingUserInfo.classList.remove("hide");
             }
              
         }  

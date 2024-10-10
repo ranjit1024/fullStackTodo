@@ -1,86 +1,89 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container{
   height: 100vh;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-}
-
-.container {
   display: flex;
+  /* width: 100vh; */
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* flex-direction: row; */
+}
+.container  button{
+  padding: 5px 20px;
 }
 
-.form-box {
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+.modal[open]{
+  pointer-events: auto;
+}
+.modal[open]{
+  animation:
+            slide-up 500ms forwards,
+            fade-in 500ms forwards;
+}
+
+.modal[open]::backdrop{
+  animation: fade-in 500ms forwards;
+}
+
+.modal::backdrop{
+  background: rgb(0 0 0 / .5);
+}
+
+.modal{
+  padding: 10px;
+  border-radius: 10px;
+  border:2px solid rgba(0, 0, 0, 0.605);
   text-align: center;
-  transition: all 0.3s ease;
+  margin: auto;
+  
 }
 
-.form-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
+.modal[closing]{
+  display: block;
+  inset: 0;
+  pointer-events: none;
+  animation: fade-out 500ms forwards;
+  /* background-color: rebeccapurple; */
+}
+.modal[closing]::backdrop{
+  animation: fade-out 500ms forwards;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
+@keyframes fade-in {
+ 0%{
+  opacity: 0;
+ } 
+ 100%{
+  opacity: 1;
+ }
 }
 
-.input-field {
-  padding: 15px 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: 0.3s;
+@keyframes fade-out {
+ 100%{
+  opacity: 0;
+ } 
+ 0%{
+  opacity: 1;
+ }
+}
+@keyframes slide-up{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
 }
 
-.input-field:focus {
-  border-color: #6e8efb;
-  outline: none;
-}
 
-.submit-btn {
-  background: #6e8efb;
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+/* extara css */
 
-.submit-btn:hover {
-  background: #a777e3;
-}
-
-.toggle-box {
-  margin-top: 20px;
-}
-
-#toggle-btn {
-  color: #6e8efb;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#toggle-btn:hover {
-  color: #a777e3;
+/* .modal{
+  
+} */
+.modal > *{
+  margin-bottom: 10px;
 }
