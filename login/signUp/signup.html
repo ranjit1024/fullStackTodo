@@ -16,17 +16,34 @@
                 <p id="signup">Create Account</p>
                 <div class="input-field">
                     <input id="username" type="text" placeholder="Username"  />
-                    <span class="notValidUser">Username Length Must be 6</span>
+
+                    <div class="showing-info-username common hide">
+                        <span ><i class="bi bi-x-octagon-fill"></i>Username Must Contain 6 letters</span>
+                    </div>
+
                 </div>
+                
                 <div class="input-field">
                     <input id="email" type="email" placeholder="Email"  />
-                    <span class="notValidUser">Password Length Must be 8</span>
+
+                    <div class="showing-info-email common ">
+                        <span ><i class="bi bi-x-octagon-fill"></i>Email Already In Use</span>
+                    </div>
+
                 </div>
                 <div class="input-field" id="password-field">
                     <input id="password" type="password" placeholder="Password">
                     <i class="bi bi-eye-slash password-hide"></i>
                     <i class="bi bi-eye hide password-show"></i>
-                    <span class="notValidUser">Password Length Must be 8</span>
+
+                    <div class="notValidPassword hide">
+                        <span ><i class="bi bi-x-octagon-fill"></i>Email Already In Use</span>
+                    </div>
+
+                    <div class="validEmail
+                     hide">
+                        <span><i class="bi bi-patch-check-fill"></i>Email is valid</span>
+                    </div>
                 </div>
                 <button type="submit"  class="btn">Sign Up</button>
                 <p>Already have an account? <a href="../signIn/signin.html">Sign In</a></p>

@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popup Modal Box</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-  </head>
-  <body>
-    <section>
-      <button class="show-modal">Show Modal</button>
-      <span class="overlay"></span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 class="form-title" id="form-title">Sign Up</h1>
 
-      <div class="modal-box">
-        <i class="fa-regular fa-circle-check"></i>
-        <h2>Completed</h2>
-        <h3>You have sucessfully downloaded all the source code files.</h3>
+            <!-- Signup form -->
+            <form id="signup-form" class="input-group">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
 
-        <div class="buttons">
-          <button class="close-btn">Ok, Close</button>
-          <button>Open File</button>
+            <!-- Sign in form (initially hidden) -->
+            <form id="signin-form" class="input-group" style="display:none;">
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+
+            <div class="toggle-box">
+                <span id="toggle-text">Already have an account? <a href="#" id="toggle-btn">Sign In</a></span>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
 
-    <script>
-      const section = document.querySelector("section"),
-        overlay = document.querySelector(".overlay"),
-        showBtn = document.querySelector(".show-modal"),
-        closeBtn = document.querySelector(".close-btn");
-
-      showBtn.addEventListener("click", () => section.classList.add("active"));
-
-      overlay.addEventListener("click", () =>
-        section.classList.remove("active")
-      );
-
-      closeBtn.addEventListener("click", () =>
-        section.classList.remove("active")
-      );
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
