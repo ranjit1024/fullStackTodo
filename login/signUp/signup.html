@@ -26,7 +26,7 @@
                 <div class="input-field">
                     <input id="email" type="email" placeholder="Email"  />
 
-                    <div class="showing-info-email common ">
+                    <div class="showing-info-email common hide ">
                         <span ><i class="bi bi-x-octagon-fill"></i>Email Already In Use</span>
                     </div>
 
@@ -34,17 +34,13 @@
                 <div class="input-field" id="password-field">
                     <input id="password" type="password" placeholder="Password">
                     <i class="bi bi-eye-slash password-hide"></i>
-                    <i class="bi bi-eye hide password-show"></i>
-
-                    <div class="notValidPassword hide">
-                        <span ><i class="bi bi-x-octagon-fill"></i>Email Already In Use</span>
-                    </div>
-
-                    <div class="validEmail
-                     hide">
-                        <span><i class="bi bi-patch-check-fill"></i>Email is valid</span>
-                    </div>
+                    <i class="bi bi-eye anotherHide password-show"></i>                    
                 </div>
+
+                <div class="showing-password-info hide">
+                    <span ><i class="bi bi-x-octagon-fill"></i></span>
+                </div>
+
                 <button type="submit"  class="btn">Sign Up</button>
                 <p>Already have an account? <a href="../signIn/signin.html">Sign In</a></p>
             </form>

@@ -110,6 +110,12 @@ span{
     margin-right: 5px;
 }
 
+.showing-password-info{
+    text-align: end;
+}
+.showing-password-info i{
+    margin-right: 5px;
+}
 #password-field{
     position: relative;
     flex-direction: column;
@@ -117,7 +123,7 @@ span{
 }
 #password-field i{
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 9px;
     border: none;
     background-color: transparent;
@@ -126,4 +132,8 @@ span{
     font-weight: 600;
     color: blue;
     border-radius: 90px;
+}
+
+.anotherHide{
+    display: none;
 }
