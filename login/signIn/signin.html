@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In / Sign Up</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/error.css">
 </head>
 <body>
+   
     <div class="container">
         <!-- Sign In / Sign Up Form Section -->
         <div class="form-container">
@@ -14,14 +16,20 @@
             <form id="signInForm" class="form sign-in-form">
                 <p id="signin">Sign In</p>
                 <div class="input-field">
-                    <input type="email" placeholder="Email"  />
+                    <input type="email" placeholder="Email" id="email"/>
+                    <div id="notValidEmail" class="hide">
+                        <span><i class="bi bi-x-octagon-fill"></i>Email is not Valid</span>
+                    </div>
                 </div>
 
                 <div class="input-field" id="password-field">
-                    <input id="password" type="password" placeholder="Password">
+                    <input id="password" type="password" placeholder="Password" id="password">
                     <i class="bi bi-eye-slash password-hide"></i>
-                    <i class="bi bi-eye anotherHide password-show"></i>                    
+                    <i class="bi bi-eye anotherHide password-show"></i>   
                 </div>
+                <div id="notValidPassword" class="hide" >
+                    <span><i class="bi bi-x-octagon-fill"></i>not Valid Password</span>
+                </div>                 
 
                 <button type="submit" class="btn">Sign In</button>
                 <p>Don't have an account? <a href="../signUp/signup.html">Sign Up</a></p>
@@ -32,8 +40,12 @@
             
         </div>
     </div>
+    <div id="toastBox">
+        
+    </div>
 
-    <script src="index.js"></script>
+    
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
